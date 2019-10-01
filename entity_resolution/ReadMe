@@ -1,0 +1,18 @@
+
+Buiding an Entity Resolution (ER) system that identifies duplicated organization entities and assign a unique id to each organization name. Please avoid using existing entity resolution libraries. If you can't finish, explain in as much detail what you would do. Submit your code, an explanation of your work, and documentation to run the code within 4 hours.
+
+The output of the code produces
+
+name,id
+MLS MULTINATION LOGISTIC SERVICES,AB3CJX
+LEICA CANADA,B1DGJC
+MLS MULTINATIONAL LOGISTIC SERVICES,AB3CJX
+
+In the core of this system is  using double_metaphone algorithm that given  an entity returns characters key, which are a phonetic translation of the passed in wordphonetic key generator methods.
+
+In the notebok are performed the following steps
+- read the dataset in data frame and convert it into list
+- Perform the normalization and cleaning and sorting 
+- Find for each entities the phonetic tuples from the methaphone algorithm 
+- Filter the entities based on the tuples, if the tuple are equivalent then extract the entities
+- the extracted entities are provided with an ID, which I figured to be the first item of the tuple.
