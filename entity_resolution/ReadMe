@@ -10,9 +10,8 @@ MLS MULTINATIONAL LOGISTIC SERVICES,AB3CJX
 
 The core of this system entails using double_metaphone algorithm that given  an entity returns characters key, which are a phonetic translation of the passed in wordphonetic key generator methods.
 
-In the notebok are performed the following steps:
-- read the dataset in data frame and convert it into list
-- Perform the normalization and cleaning and sorting 
+In the jupyter notebook are performed the following steps:
+- read the dataset and perform the normalization , cleaning and sorting 
 - Find for each entities the phonetic tuples from the methaphone algorithm 
 - Filter the entities based on the tuples, if the tuple are equivalent then extract the entities
-- the extracted entities are provided with an ID, which I figured to be the first item of the tuple.
+- the extracted entities are provided with an ID, that represents the first item of the tuple.
